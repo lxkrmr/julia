@@ -15,7 +15,8 @@ func main() {
 		fmt.Print("Deine Wahl: ")
 		fmt.Scanln(&wahl)
 
-		if strings.ToUpper(wahl) == "A" {
+		wahl = strings.ToUpper(wahl)
+		if wahl == "A" {
 			fmt.Println("Yay! 🥰")
 		} else {
 			fmt.Println("Ungültig, aber sowas von 🙂‍↔️😒😞")
