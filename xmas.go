@@ -13,7 +13,11 @@ func main() {
 		fmt.Println("A: Ja | B: Nein | C: Vielleicht")
 
 		fmt.Print("Deine Wahl: ")
-		fmt.Scanln(&wahl)
+		_, err := fmt.Scanln(&wahl)
+
+		if err != nil {
+			fmt.Println("Irgendwie hast du einen Fehler gemacht, bitte versuche es noch einmal:", err)
+		}
 
 		wahl = strings.ToUpper(wahl)
 		if wahl == "A" {
